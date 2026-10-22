@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lira-local",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "--directory", "product", "python", "-m", "app.main"],
+      "port": 8010
+    }
+  ]
+}
