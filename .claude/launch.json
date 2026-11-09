@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "lira-local",
-      "runtimeExecutable": "uv",
-      "runtimeArgs": ["run", "--directory", "product", "python", "-m", "app.main"],
-      "port": 8010
+      "name": "lira-console",
+      "runtimeExecutable": "D:\\lirav1\\backend\\.venv\\Scripts\\python.exe",
+      "runtimeArgs": ["-m", "uvicorn", "app.main:app", "--app-dir", "D:/lirav1/backend", "--host", "127.0.0.1", "--port", "8012"],
+      "port": 8012
     }
   ]
 }

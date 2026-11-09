@@ -1,9 +1,11 @@
-# Runtime data for the local app: the DuckDB file, generated sample CSVs,
-# caches, and the virtual environment. None of this is source.
-product/data/
-product/sample/*.csv
-*.ducklake
+# Lira 2.0 运行时数据与构建产物
+data/
+backend/.venv/
+frontend/node_modules/
+frontend/dist/
+*.log
 
+# Python
 .venv/
 __pycache__/
 *.py[cod]
@@ -11,11 +13,6 @@ __pycache__/
 .ruff_cache/
 *.tsbuildinfo
 
-# React build output and installed packages; `scripts/build-web.ps1` rebuilds.
-product/web/node_modules/
-product/web/dist/
-
-# Eval output is generated; questions.json is source.
-product/eval/results.csv
-
+# 环境变量
 .env
+.env.local

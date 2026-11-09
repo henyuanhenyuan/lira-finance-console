@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: lira-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: lira
+      POSTGRES_PASSWORD: lira_dev_2026
+      POSTGRES_DB: lira
+      TZ: Asia/Shanghai
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./data/pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lira -d lira"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
