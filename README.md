@@ -69,7 +69,7 @@ START → Supervisor ─┬─→ MetricAnalyst  （取数与同环比）
 - 最多 **5 个账号**，管理员可创建、停用、重置密码；停用后立即无法登录。
 - 角色：`owner`（管理员）/ `analyst`（分析员）/ `viewer`（只读）。
 - 密码 bcrypt 散列，JWT 有效期 12 小时，每次请求校验账号状态。
-- 演示账号：`admin@lira.local` / `lira2026`（另有 `analyst@lira.local` / `analyst2026`）。
+- 演示账号：`admin@lira.local` / `lira2026`（首次启动自动创建）。
 
 ## 接入模块
 
