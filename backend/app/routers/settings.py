@@ -120,12 +120,12 @@ async def users(user=Depends(security.current_user)):
 async def create_user(body: UserIn, user=Depends(_owner)):
     if body.role not in ROLES:
         raise HTTPException(400, f"角色必须是 {ROLES}")
-    count = await db.fetchval("SELECT COUNT(*) FROM ops.users")
-    if count >= MAX_USERS:
-        raise HTTPException(400, f"最多只能创建 {MAX_USERS} 个账号")
     exists = await db.fetchval("SELECT 1 FROM ops.users WHERE lower(email)=lower($1)", body.email)
     if exists:
         raise HTTPException(400, "该邮箱已存在")
+    count = await db.fetchval("SELECT COUNT(*) FROM ops.users")
+    if count >= MAX_USERS:
+        raise HTTPException(400, f"最多只能创建 {MAX_USERS} 个账号")
     uid = await db.fetchval(
         """INSERT INTO ops.users(email,password_hash,display_name,role,status)
            VALUES($1,$2,$3,$4,'active') RETURNING id""",

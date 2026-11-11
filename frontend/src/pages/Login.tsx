@@ -76,14 +76,11 @@ export default function Login() {
           <div className="stack gap-4">
             <span className="eyebrow">Sign in</span>
             <h2 className="h2">登录控制台</h2>
-            <p className="muted" style={{ fontSize: 12.5, marginTop: 2 }}>
-              使用商户管理员账号接入实时财务数据
-            </p>
           </div>
 
           <form className="stack gap-12 mt-24" onSubmit={submit}>
             <div className="field">
-              <label>工作邮箱</label>
+              <label>账号</label>
               <input className="input" value={email} onChange={(e) => setEmail(e.target.value)}
                      placeholder="you@company.com" autoComplete="username" />
             </div>
@@ -103,7 +100,6 @@ export default function Login() {
 
           <div className="divider mt-24" />
           <div className="row between mt-12 muted" style={{ fontSize: 11.5 }}>
-            <span>演示账号已预填</span>
             <span className="mono">v2.0</span>
           </div>
         </div>
