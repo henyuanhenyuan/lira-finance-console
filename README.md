@@ -6,6 +6,8 @@
 
 > Python + FastAPI + LangGraph + RAG(pgvector) + MCP + 可演示多智能体项目 + 评测集
 
+详细设计见 [ARCHITECTURE.md](ARCHITECTURE.md)。
+
 ---
 
 ## 界面结构
@@ -142,11 +144,3 @@ Windows 可用 `.\start.ps1` 一键完成上述步骤。MCP 服务端另起：`p
 | 明细表索引 | orders / refunds / ad_daily 常用查询路径 |
 
 实测接口耗时：总览 7 天 13ms、90 天 27ms，排行 9ms。
-
----
-
-## 说明
-
-- 旧版 v1（DuckDB 单机版）已整体移除，仓库只保留当前这一套技术栈。
-- 前后端严格 1:1：36 个后端接口全部被前端消费，无闲置模块。
-- 详细设计见 [ARCHITECTURE.md](ARCHITECTURE.md)。
