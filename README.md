@@ -144,3 +144,9 @@ Windows 可用 `.\start.ps1` 一键完成上述步骤。MCP 服务端另起：`p
 | 明细表索引 | orders / refunds / ad_daily 常用查询路径 |
 
 实测接口耗时：总览 7 天 13ms、90 天 27ms，排行 9ms。
+
+---
+
+## 许可
+
+[MIT](LICENSE)
